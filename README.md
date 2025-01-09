@@ -34,4 +34,39 @@ When traffic goes into the switch, or the router, the switch knows what the MAC 
 
 ### ARP attack
 
+On a Ethernet network, connected via switch, it is relatively easy to perform MITM attacks.
 
+An attacker fools other devices on the ntetwork into believing that the attacker is the default gateway or the router by abusing the Address Resolution Protocol (ARP)
+
+The attacker can then observe, record, inject into and manipulate traffic.
+
+In a Wi-Fi network, traffic can also be manipulated in this way.
+
+If you have a hub instead of switch, you can observer all the traffic anyway, but for injection manipulate you will need ARP spoofing
+
+### Address Resolution Protocol
+
+This is IP to MAC resolution, it works at the Data link layer.
+
+It resolves the network layer IP address into Data link layer MAC address
+
+```
+sudo arp -a
+```
+
+If a device doesn't have an entry in it's ARP table to connect to a given IP address, then it needs to issue a ARP request to resolve the IP to MAC and gain the MAC address.
+
+ARP is used to find out the MAC address ➡️ ARP broadcast a frame requesting the MAC address for the IP it has ➡️ The device with the correct IP replies this correct MAC address ➡️ This is then added to the ARP table cache.
+
+With tools like `arpspoof`, `ethercap` (kali), `cain and able` (windows) an attacker in a network could fool the devices on a network that they are the correct MAC address for the router's IP address, by simply responding to say me I am the router. This is ARP spoofing, ARP poisoning.
+
+This is possible because ARP doesn't have authentication, anyone can say they are anyone. It was developed in time when devices on a local network where all trusted.
+
+There is absolutely zero security around it. When the ARP spoofing it's beed done, an attacker can see all the traffic of the victim, instead of the router and can perform manipulation, injection, SSL striping etc.
+
+The attacker needs to be internal.
+
+
+More: https://www.irongeek.com/
+
+---
