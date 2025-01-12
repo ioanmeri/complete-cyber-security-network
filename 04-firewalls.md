@@ -98,12 +98,34 @@ So untrusted malware could not run a reverse shell (but a malware can bypass thi
 
 ---
 
+## Virtual Firewall
 
+You could have a network or host-based virtual firewall
+- Zen Server on your network that has one of it's virtual machines acting as a firewall
+- Laptop with virtual box with a pfSense VM to protect guest virtual machines
 
+Virtual firewall means you don't need a dedicated hardware firewall. Usefull when:
+-  nesting VPN services
+-  prevent VPN leaks
+-  filtering traffic on VM
 
+Main rule: all traffic should be denied unless implicitly allowed
+- Block IPv6 (if not used)
+- Block UPnP 1900
+- Block IGMP
+- Block any Windows, Max OS X, Linux services that are not used
 
+---
 
+## Dynamic Packet Filtering or Stateful Packet Inspection (SPI)
 
+Modern firewalls have SPI and you only need to allow outbound connections, you don't need a inbound rule for traffic to return to you
+
+e.g. you don't need to allow web traffic to come back // only need to allow it out of network
+
+When a connection is made, the source port is sent (higher than 1023) and the firewall remembers and automatically allows through Dynamic ACL the inbound connection while the session is running.
+
+---
 
 
 
