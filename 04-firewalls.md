@@ -127,5 +127,126 @@ When a connection is made, the source port is sent (higher than 1023) and the fi
 
 ---
 
+## IP Tables
+
+All linux based firewalls use the **netfilter** system for kernel packet filtering
+
+The firewalls use port, protocol and IP and operate at network / transport layer
+
+IPTables is the database of firewall rules
+
+**Install IPTables**
+```
+apt-get install iptables
+```
+
+
+**List of chains and rules**
+
+```
+iptables -L
+```
+
+Input Chain // Forward Chain // Output Chain
+
+Input controls the inbound connections
+
+Forward for connections destined to be forward on to another device (like a router)
+
+Ouput chain controls outbound connections (e.g. the laptop to server the web)
+
+Default Policy **DROP**: When non of the existing rules apply the connection will be dropped
+
+**Delete all the rules**
+
+```
+iptables -F
+```
+
+**Set default policy**
+```
+iptables -P INPUT DROP
+```
+
+or
+
+```
+iptables -P INPUT ACCEPT
+iptables -P OUTPUT ACCEPT
+```
+
+**Demonestration of laptop that I want to lock down to only browse the web**
+
+```
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
+```
+
+**-A append, -i interface, lo local, -j Jump switch**
+**Allow all incoming packets destined for the local host interface to be accepted**
+
+```
+iptables -A INPUT -i lo -j ACCEPT
+```
+
+==
+
+ACCEPT  all  ---  anywhere  anywhere
+
+**Verbose information**
+```
+iptables -L -v --line-number -n
+```
+
+**Next rule**
+```
+iptables -A INPUT -m state --state RELATED, ESTABLISHED -j ACCEPT
+```
+--state imports a state module that can examine the state of a packet and determine if it is new (new connections that weren't initiated by the host system), established or related (incoming packets of already established connections)
+
+This is already dynamic packet filtering
+
+**Next rule**
+```
+iptables -A OUTPUT -o lo -j ACCEPT
+```
+
+**With dynamic packet filtering**
+```
+iptables -A OUTPUT -m state --state RELATED, ESTABLISHED -j ACCEPT
+```
+
+**To serf the web, will need port 53 UDP // DNS queries**
+```
+iptables -A OUTPUT -o eth0 -p udp -m udp --dport 53 -j ACCEPT
+```
+
+**Also add port 80 HTTP**
+```
+iptables -A OUTPUT -o eth0 -p tcp -m tcp --dport 80 -m state --state NEW -j ACCEPT
+```
+
+**Also for port 443 HTTPS**
+```
+iptables -A OUTPUT -o eth0 -p tcp -m tcp --dport 443 -m state --state NEW -j ACCEPT
+```
+
+**Ouput of IPTables after adding the rules**
+
+```
+iptables -L --line-number -n
+```
+
+| Chain Num | Output target | prot | opt | source | destination | desc |
+|----------| ------------- | ---- | -----| -------| ----------- | ---- |
+| 1 | ACCEPT | all | -- | 0.0.0.0/0 | 0.0.0.0/0 | _ |
+| 2 | ACCEPT | all | -- | 0.0.0.0/0 | 0.0.0.0/0 | state RELATED, ESTABLISH |
+| 3 | ACCEPT |udp | -- | 0.0.0.0/0 | 0.0.0.0/0 | udp dpt:53 |
+| 4 | ACCEPT | tcp | -- | 0.0.0.0/0 | 0.0.0.0/0 | tcp dpt:80 state NEW |
+| 5 | ACCEPT | tcp | -- | 0.0.0.0/0 | 0.0.0.0/0 | tcp dpt:443 state NEW |
+
+
+---
 
 
