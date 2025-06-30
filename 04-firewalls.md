@@ -1,5 +1,25 @@
 # 4. Firewalls
 
+[Introduction](#introduction)
+
+[Categories of Firewalls](#categories-of-firewalls)
+
+[Ingress / Inbound filtering](#ingress--inbound-filtering)
+
+[Egress / Outbound filtering](#egress--outbound-filtering)
+
+[Network isolation](#network-isolation)
+
+[Home Network](#home-network)
+
+[Virtual Firewall](#virtual-firewall)
+
+[IP Tables](#ip-tables)
+
+---
+
+## Introduction
+
 Firewalls allow and deny traffic based on a set of rules or Access Control List. Most work on the network and transport layers to accept or reject traffic based on port protocol and address.
 
 **Example**
@@ -38,7 +58,7 @@ Firewalls that are not application level firewalls cannot do deep inspection ins
 
 On a home network, because of NAT, no network traffic can connect into the network without an explicit **port forwarding** rule or **DMZ** being setup
 
-There is little need for firewall to block inbound traffic in most cases in a home network because internet traffic from real IPs cannot communicate to private IP addresses on an internat network
+There is little need for firewall to block inbound traffic in most cases in a home network because internet traffic from real IPs cannot communicate to private IP addresses on an internet network
 
 OS have their own firewalls, these are called host based firewalls
 
@@ -147,15 +167,24 @@ apt-get install iptables
 iptables -L
 ```
 
-Input Chain // Forward Chain // Output Chain
+- Input Chain
+  - Input controls the inbound connections
+  - e.g ping this laptop / files share
+- Forward Chain
+  - Forward for connections **destined to be forward on to another device** (like a router)
+  - also for inbound connections
+  - only for special devices like routers, NAT addressing
+- Output Chain
+  - Ouput chain controls outbound connections (e.g. allow the laptop to serf the web)
 
-Input controls the inbound connections
+Chains have default behavior
+- Default Policy **DROP**: When non of the existing rules apply the connection will be dropped
+  - requests will be timed out
+- Reject: don't allow the connection and send back a response to inform the source that has been rejected
+  - ping message: destination port unreachable
+- Accept
 
-Forward for connections destined to be forward on to another device (like a router)
-
-Ouput chain controls outbound connections (e.g. the laptop to server the web)
-
-Default Policy **DROP**: When non of the existing rules apply the connection will be dropped
+### Usufull commands
 
 **Delete all the rules**
 
@@ -175,7 +204,7 @@ iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
 ```
 
-**Demonestration of laptop that I want to lock down to only browse the web**
+### Demonestration of laptop that I want to lock down to only browse the web
 
 ```
 iptables -P INPUT DROP
@@ -183,14 +212,18 @@ iptables -P FORWARD DROP
 iptables -P OUTPUT DROP
 ```
 
-**-A append, -i interface, lo local, -j Jump switch**
 **Allow all incoming packets destined for the local host interface to be accepted**
 
 ```
 iptables -A INPUT -i lo -j ACCEPT
 ```
+- -A append
+- -i interface
+- lo local
+- -j Jump switch
+  - jump to the target action for packets maching that rule
 
-==
+---
 
 ACCEPT  all  ---  anywhere  anywhere
 
@@ -203,9 +236,11 @@ iptables -L -v --line-number -n
 ```
 iptables -A INPUT -m state --state RELATED, ESTABLISHED -j ACCEPT
 ```
---state imports a state module that can examine the state of a packet and determine if it is new (new connections that weren't initiated by the host system), established or related (incoming packets of already established connections)
-
-This is already dynamic packet filtering
+- -m state imports a state module that can examine the state of a packet and determine if it is
+  - new (new connections that weren't initiated by the host system),
+  - established
+  - related (incoming packets of already established connections)
+  - this is enabling dynamic packet filtering
 
 **Next rule**
 ```
@@ -214,7 +249,7 @@ iptables -A OUTPUT -o lo -j ACCEPT
 
 **With dynamic packet filtering**
 ```
-iptables -A OUTPUT -m state --state RELATED, ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
 
 **To serf the web, will need port 53 UDP // DNS queries**
@@ -246,6 +281,50 @@ iptables -L --line-number -n
 | 4 | ACCEPT | tcp | -- | 0.0.0.0/0 | 0.0.0.0/0 | tcp dpt:80 state NEW |
 | 5 | ACCEPT | tcp | -- | 0.0.0.0/0 | 0.0.0.0/0 | tcp dpt:443 state NEW |
 
+
+**Show commands entered to create the rules**
+```
+iptables - S
+```
+
+**Save rules**
+
+Kali / Debian
+```
+/sbin/iptables-save
+```
+
+**Delete rules (use line number and chain)**
+```
+iptables -D OUTPUT 5
+```
+**Remove rules (firewall switched off)**
+
+```
+iptables -t nat -F
+iptables -t mangle -F
+iptables -F //flush command
+iptables -X //delete non default chains
+```
+
+**V6 IPs have different IP table**
+
+needs to be configured separately
+
+```
+ip6tables -L
+```
+
+```
+ip6tables -P INPUT DROP
+ip6tables -P FORWARD DROP
+ip6tables -P OUTPUT DROP
+```
+
+### Resources
+
+- https://www.frozentux.net/iptables-tutorial/iptables-tutorial.html
+- https://github.com/meetrp/personalfirewall
 
 ---
 
