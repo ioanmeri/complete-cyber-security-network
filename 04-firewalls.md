@@ -16,6 +16,8 @@
 
 [IP Tables](#ip-tables)
 
+[Linux - Host Based Firewalls - UFW, gufw & nftables](#linux---host-based-firewalls---ufw-gufw--nftables)
+
 ---
 
 ## Introduction
@@ -328,4 +330,87 @@ ip6tables -P OUTPUT DROP
 
 ---
 
+## Linux - Host Based Firewalls - UFW, gufw & nftables
+
+### UFW, UncomplicatedFirewall
+
+Frontend for IP tables, provides a framework for managing `netfitler` and CLI for manipulating the firewall
+- Simplifies IP tables commands
+- upstream for other distribution e.g. gufw
+
+**Commands**
+```
+apt-get install ufw
+iptables -L --line-number -n
+iptables -F
+iptables -L --line-number -n
+ufw status
+ufw enable
+ufw status
+iptables -L --line-number -n
+ufw status verbose
+```
+
+**Change default policy and more**
+```
+ufw default deny incoming
+ufw default deny outgoing
+ufw default allow outgoing
+```
+
+**Allow / delete ports**
+```
+ufw allow out 22
+ufw delete allow out 22
+ufw status numbered
+ufw delete 2
+ufw deny in 22 // unnecessary because of default policy
+ufw allow out 67:68/udp // range of ports, dhcp rule
+```
+
+**Only write change on IPV4. not IPV6**
+```
+nano /etc/defualt/ufw
+IPV6=no // restart firewall
+iptables -L -n
+```
+
+### Shorewall
+
+Alternative to IP tables, more flexible and powerfull but not similer
+
+---
+
+### Gufw
+
+Graphical interface of UFW
+
+```
+apt-get install gufw
+```
+
+---
+
+### GUIs & Frontends
+
+http://www.iptables.info/en/iptables-gui.html
+http://www.fwbuilder.org/4.0/hot_it_works.shtml
+http://www.turtlefirewall.com/
+http://configserver.com/cp/csf.html
+http://www.ipcop.org/
+https://www.vuurmuur.org/trac/wiki/ScreenShots
+https://help.ubuntu.com/community/firewall/ipkungfu
+http://www.linuxguruz.com/forum/viewforum.php?f-35
+
+---
+
+### Linux-firewall
+
+Only this firewall is application aware, block / allow based on application
+
+---
+
+### nftables
+
+nftables is the project that aims to replace the existing {ip,ip6,arp,eb} tables framework
 
