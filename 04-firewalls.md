@@ -1,24 +1,16 @@
 # 4. Firewalls
 
-[Introduction](#introduction)
-
-[Categories of Firewalls](#categories-of-firewalls)
-
-[Ingress / Inbound filtering](#ingress--inbound-filtering)
-
-[Egress / Outbound filtering](#egress--outbound-filtering)
-
-[MITM mitigation](#mitm-mitigation)
-
-[Network isolation](#network-isolation)
-
-[Home Network](#home-network)
-
-[Virtual Firewall](#virtual-firewall)
-
-[IP Tables](#ip-tables)
-
-[Linux - Host Based Firewalls - UFW, gufw & nftables](#linux---host-based-firewalls---ufw-gufw--nftables)
+- [Introduction](#introduction)
+- [Categories of Firewalls](#categories-of-firewalls)
+- [Ingress / Inbound filtering](#ingress--inbound-filtering)
+- [Egress / Outbound filtering](#egress--outbound-filtering)
+- [MITM mitigation](#mitm-mitigation)
+- [Network isolation](#network-isolation)
+- [Home Network](#home-network)
+- [Virtual Firewall](#virtual-firewall)
+- [IP Tables](#ip-tables)
+- [Linux - Host Based Firewalls - UFW, gufw & nftables](#linux---host-based-firewalls---ufw-gufw--nftables)
+- [Network Based Firewalls](#network-based-firewalls)
 
 ---
 
@@ -702,4 +694,14 @@ Only this firewall is application aware, block / allow based on application
 ### nftables
 
 nftables is the project that aims to replace the existing {ip,ip6,arp,eb} tables framework
+
+---
+
+## Network Based Firewalls
+
+###  Routers - DD-WRT
+
+First network based firewall is on router. Custom firmwares like DD-WRT on routers are used to get access to a more configurable Firewall (iptables)
+
+---
 
