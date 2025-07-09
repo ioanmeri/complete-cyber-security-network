@@ -705,3 +705,13 @@ First network based firewall is on router. Custom firmwares like DD-WRT on route
 
 ---
 
+
+### Hardware
+
+Dedicated hardware or dedicated virtual network firewall to create distint, different routable network.
+
+The firewall will act as the router as well as a firewall, so you wouldn't necessarily need a separate router. 
+You will probably need a modem or something that enables you to connect to the internet
+
+---
+
