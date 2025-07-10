@@ -715,3 +715,48 @@ You will probably need a modem or something that enables you to connect to the i
 
 ---
 
+### pfSense, Smoothwall and Vyos
+
+pfSense 
+- free open source firewall router software distribution based on free bsd
+- It is installed on a computer instead of a router (like custom firmware), based on PF Firewall
+- more powerful than DD WRT / ipTables
+- Can be used
+  - Firewall + Router combination
+  - DHCP server
+  - DNS server
+  - install IDS, IPS
+  - Isolate networks
+    - Virtual LAN
+    - VPN client / VPN server
+  - Torrify traffic
+
+Home Network (Untrusted) + Trusted Network (Firewall) ➡️ Router with Firewall ➡️ Internet
+
+You can block inbound attacks that match certain attack signatures
+
+Outbound filtering is a viable security control for a network firewall. You could
+use this to lock down just the ports that you intend to use, e.g. surf the web, use tor, VPNs, email
+
+Certain devices that use certain ports or services you could block, force DNS to only go to the
+DNS serves that you want it to go for privacy
+
+You could even force DNS over VPN
+
+You could block IPv6, so that you can prevent VPN leakage at the network layer instead of on your host
+
+You can block traffic that you don't like (tolerance on the network)
+
+Limit bandwidth to some users of your network
+
+A network firewall, won't help if internal malware uses port you already have opend (80, 443), can create reverse shell
+
+However, if you are using an application firewall or you proxy the traffic, the results could be better for blocking the traffic because you can do some forms of deep packet inspection
+
+The network firewall can be used to help monitor and log the network traffic
+
+A dedicated firewall is just often more functional and logging and monitoring
+
+A large use case for a network firewall is to help in the creation of network isolation probably in combination with a switch.
+
+---
