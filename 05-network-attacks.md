@@ -1,4 +1,30 @@
-# 5. Network Attacks
+# 5. Network Attacks, Architecture and Isolation
+
+- [Network Attacks and Network Isolation](#network-attacks-and-network-isolation)
+- [Arp Spoofing and Switches](#arp-spoofing-and-switches)
+
+---
+
+## Network Attacks and Network Isolation
+
+Network isolation is physically or logically putting devices on separate networks and restricting how or if devices can communicate with each other.
+
+**Threats related to such isolation**
+
+- attacker / malware on your network they can attempt to propagate an attack onto the rest of the network
+- untrusted devices / guests may be infected and can be used to propagate attacks
+- IoT are not well maintained generally
+
+network isolation will help mitigate those attacks
+
+Once an attacker is on the network they can
+- local traffic sniffing or snooping
+- MITM attacks / SSL striping / insert malicious code via HTTP
+- attacking devices directly via open services
+  - network share
+  - password protected (smart TV with vulnerable SSH)
+
+---
 
 ## Arp Spoofing and Switches
 
@@ -60,3 +86,5 @@ The attacker needs to be internal
 
 
 More: https://www.irongeek.com/
+
+---
