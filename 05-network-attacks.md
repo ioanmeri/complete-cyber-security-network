@@ -3,6 +3,7 @@
 - [Network Attacks and Network Isolation](#network-attacks-and-network-isolation)
 - [Arp Spoofing and Switches](#arp-spoofing-and-switches)
 - [Effective Network Isolation](#effective-network-isolation)
+- [Software to protect against attacks](#software-to-protect-against-attacks)
 
 ---
 
@@ -132,5 +133,18 @@ First thing is to have separate routable networks for different devices of diffe
     - Yersinia (Kali) ➡️ VLAN hoping
     - VLAN hoping but has been patched
   - easier than DMZ, simply in the switch and / or router firewall configure VLAN 1, VLAN 2
+
+
+---
+
+## Software to protect against attacks
+
+Netcut, sniffdet, xarp, arpwatch (available in pfSense)
+
+- Prefer static, dynamic IPs can be spoofed
+
+Advanced options: Catalyst (Option: Port Security), IEEE 802.1AE, IEEE 802.1X (devices need to authenticate to connect to network), DHCP Snooping, VPNs on local network to connect to local devices, pfSense and dd-wrt support VLANs and IPtables and switches support VLANs
+
+For Wi-Fi a router is needed with AP isolation and support multiple SSIDs on the same Access Point
 
 ---
