@@ -2,6 +2,7 @@
 
 - [Wi-Fi Weaknesses - WEP](#wi-fi-weaknesses---wep)
 - [Wi-Fi Weaknesses - WPA, WPA2, TKIP and CCMP](#wi-fi-weaknesses---wpa-wpa2-tkip-and-ccmp)
+- [Wi-Fi Weaknesses - Wi-Fi Protected Setup WPS, Evil Twin and Rouge AP](#wi-fi-weaknesses---wi-fi-protected-setup-wps-evil-twin-and-rouge-ap)
 
 ---
 
@@ -70,3 +71,37 @@ both use the SSID in salt but should be a random value that is added to the encr
 
 ---
 
+## Wi-Fi Weaknesses - Wi-Fi Protected Setup WPS, Evil Twin and Rouge AP
+
+
+**WPS**
+
+- The symbol of WPS protected Wi-Fi looks like recycle and has an 8-Digit WPS PIN
+- can be brute forced within hours
+  - then can get WPA, WPA2, preshared key, password, access to the network
+  - revel tool in kali
+- must be turned off
+
+**Evil Twin**
+
+- attacker setup access point with SSID the same as a real Wi-Fi network
+  - effectivily a man in the middle attack
+  - can do SSL stripping, browser attacks
+- pinapple hardware can be bought
+
+Nation state and agencies have exploits against the core components of Wi-Fi and wireless technology
+- Wi-Fi Drivers
+- Protocol stack DHCP
+- WPA / AES that community is not aware of
+- NIGHTSTAND Hardware
+- Drones are equipped with Wi-Fi crackers attached to them
+
+**Rouge AP**
+- if you are connected to an untrusted access point, you need to take more precautions
+- they are a man in the middle
+- it's called Rouge AP
+- can strip the SSL
+- can see all of the things you are doing, sites you are visiting
+- VPNs are required
+
+---
