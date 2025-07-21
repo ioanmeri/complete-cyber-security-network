@@ -3,6 +3,7 @@
 - [Wi-Fi Weaknesses - WEP](#wi-fi-weaknesses---wep)
 - [Wi-Fi Weaknesses - WPA, WPA2, TKIP and CCMP](#wi-fi-weaknesses---wpa-wpa2-tkip-and-ccmp)
 - [Wi-Fi Weaknesses - Wi-Fi Protected Setup WPS, Evil Twin and Rouge AP](#wi-fi-weaknesses---wi-fi-protected-setup-wps-evil-twin-and-rouge-ap)
+- [Wi-Fi Security Testing](#wi-fi-security-testing)
 
 ---
 
@@ -105,3 +106,44 @@ Nation state and agencies have exploits against the core components of Wi-Fi and
 - VPNs are required
 
 ---
+
+## Wi-Fi Security Testing
+
+With Kali Linux, a compatible USB network adapter or doggle network device is needed to be able to put it into monitor mode and to do packet injection
+
+- Atheros AR9271
+- Ralink RT3070
+- Ralink RT3572
+- Realtek 8187L
+- Alfa AWUS036NHA
+
+
+**Kali Pre-shared key cracking program**
+
+```
+aircrack-ng | more
+```
+
+**Implementation of an offline dictionary attack against WPA / WPA2 / Personal**
+
+```
+cowpatty
+```
+
+**Brute force attack against Wifi protected setup or WPS**
+
+```
+reaver
+```
+in combination with aircrack to know MAC address
+
+also 
+- Fern WIFI Cracker
+  - to recover WEP, WPA, WPS keys
+- securitystartshere.org
+
+
+---
+
+
+
