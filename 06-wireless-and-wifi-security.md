@@ -4,6 +4,7 @@
 - [Wi-Fi Weaknesses - WPA, WPA2, TKIP and CCMP](#wi-fi-weaknesses---wpa-wpa2-tkip-and-ccmp)
 - [Wi-Fi Weaknesses - Wi-Fi Protected Setup WPS, Evil Twin and Rouge AP](#wi-fi-weaknesses---wi-fi-protected-setup-wps-evil-twin-and-rouge-ap)
 - [Wi-Fi Security Testing](#wi-fi-security-testing)
+- [Wireless Security - Secure Configuration and Network Isolation](#wireless-security---secure-configuration-and-network-isolation)
 
 ---
 
@@ -144,6 +145,64 @@ also
 
 
 ---
+
+## Wireless Security - Secure Configuration and Network Isolation
+
+Wireless networks should be considered less trusted than psysical networks, those both should be isolated from each other where possible.
+Traffic from wireless devices, ideally should not be able to reach your wired devices
+
+**Example**
+
+SSID 1: Untrusted guest Wi-Fi
+- 192.168.4.0/24
+
+SSID 2: Semi-Trusted Wi-FI
+- 192.168.5.0/24
+
+these two networks are running from the same Wireless Access Point
+
+They are separate Wi-Fi networks even though they are connected to the same access point. They would have
+- different passwords
+- traffic could be allowed to go inbound (e.g. administration to untrusted device, best to isolate it)
+
+**Custom firmware**
+
+To facilitate the ability to be able to add equipment, consider the installation of custom firmware.
+
+**Best practices**
+
+- switch off Wi-Fi in not used
+- change default SSID to something random / or not the default
+- WPA2-Enterprise (WPA-802. IX mode)
+- RADIUS Authentication Server
+- Extensible Authentication Protocol (EAP)
+- WPA2-Personal (WPA-PSK Pre-shared key)
+- CCMP/AES Encryption
+- CBC-MAC
+- Never use WEP or WPA
+- Avoid TKIP
+- Use complex passwords
+- Always encrypt Network Traffic when possible (TLS, VPNs)
+- Disable WPS!
+- arpwatch (ARP spoffing protection)
+- software to discover rogue or evil twin wireless access point
+- change default password
+- close admin interfaces you don't use
+- turn off Wi-Fi if no used
+
+**More optional**
+
+- Disable Wireless SSID Broadcast
+  - any wifi scanner software will be able to see it
+- Consider implementating IEEE 802.1X
+- Set max associated clients to the devices you have
+- RF Isolation and reduction methods
+
+ ---
+
+
+
+
 
 
 
