@@ -5,6 +5,7 @@
 - [Wi-Fi Weaknesses - Wi-Fi Protected Setup WPS, Evil Twin and Rouge AP](#wi-fi-weaknesses---wi-fi-protected-setup-wps-evil-twin-and-rouge-ap)
 - [Wi-Fi Security Testing](#wi-fi-security-testing)
 - [Wireless Security - Secure Configuration and Network Isolation](#wireless-security---secure-configuration-and-network-isolation)
+- [Wireless Security - RF Isolation and Reduction](#wireless-security---rf-isolation-and-reduction)
 
 ---
 
@@ -200,7 +201,20 @@ To facilitate the ability to be able to add equipment, consider the installation
 
  ---
 
+## Wireless Security - RF Isolation and Reduction
 
+For neighbours, local based adversaries, or with boosters among distance and antennas from attacking your network.
+
+To mitigate these attacks you should consider physically putting the access point at the center of the building, should have a specific zone of coverage. 
+- perform a wireless signal detection survey to identify the bountary of the wireless perimeter
+  - with portable wireless device
+- limit the range of the signal to just the areas that you need it to be in
+  - chaning access point location, power output, reduce range of WiFi
+- change the antenna to a directional antenna to reduce the scope
+- use of dampening materials - HSF33 Shielding paint (HF_LF)
+- faraday rooms / faraday bags
+
+---
 
 
 
