@@ -6,6 +6,7 @@
 - [Wi-Fi Security Testing](#wi-fi-security-testing)
 - [Wireless Security - Secure Configuration and Network Isolation](#wireless-security---secure-configuration-and-network-isolation)
 - [Wireless Security - RF Isolation and Reduction](#wireless-security---rf-isolation-and-reduction)
+- [Wireless security - Who is on my Wi-Fi Network](#wireless-security---who-is-on-my-wi-fi-network)
 
 ---
 
@@ -216,7 +217,47 @@ To mitigate these attacks you should consider physically putting the access poin
 
 ---
 
+## Wireless security - Who is on my Wi-Fi Network
+
+**Ways to do it**
+
+- Look on the router's Access Point & Clients
+- whoisonmywift.com
+- Wi-Fi Inspector
+- Wireless Network Watcher
+- GlassWire
+- Fing App
+
+**With nmap with SYN packet**
+
+```
+nmap -sP 192.168.1.0/24
+```
+
+or regular port scan (also on zenmap UI)
+
+```
+nmap -T4 192.168.1.0/24
+```
+
+**Arp scan**
+
+```
+arp-scan eth0 192.168.1.0/24
+arp -a # existin arp cache
+```
 
 
+**airodump**
 
+```
+airodump-ng wlan1
+```
 
+**protocol analyzers to see network traffic**
+
+```
+tcpdump
+```
+
+---
