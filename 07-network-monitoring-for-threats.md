@@ -1,6 +1,7 @@
 # Section 7: Network Monitoring for Threats
 
 - [Syslog](#syslog)
+- [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-1)
 
 ---
 
@@ -94,5 +95,44 @@ tail -f /var/log/user.log
 also need a log analyzer
 
 ---
+
+## Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1
+
+**Wireshark: Protocol Analyser for Network Traffic**
+
+`tshark` is the commant line version of the wireshark, only available if wireshark is installed. Same options as tshark and more.
+
+```
+tshark -h
+```
+
+tcpdump is another command line protocol analyzer that is often avaiable natively
+
+---
+
+**Runtime**
+
+We can run them on each of the devices of the network (limited in the traffic that you can see, if you are using a switch), we can run it on the router or firewall.
+
+You can try ssh into the router or the firewall and run tcpdump
+
+```
+tcpdump -h
+tcpdump -D
+tcpdump -i eth0 # capture traffic
+tcpdump -i any
+tcpdump -n -i any # display ip addresses and port numbers
+tcpdump -n -i any dst port 80
+tcpdump -n -i any dst port 53
+tcpdump -n -i any port 53
+tcpdump -i ppp0 -vv ip6 # modem interface for ipv6
+tcpdump -i any port 53 or port 80 or port 443
+tcpdump -i any host 192.168.1.81 and not src net 192.168.1.0/24 # can see if anything did connect into it
+tcpdump -i any -s 65535 -w capturefile.cap # capture to a file with storage capability
+```
+
+---
+
+
 
 
