@@ -2,6 +2,7 @@
 
 - [Syslog](#syslog)
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-1)
+- [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 2](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-2)
 
 ---
 
@@ -98,7 +99,7 @@ also need a log analyzer
 
 ## Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1
 
-**Wireshark: Protocol Analyser for Network Traffic**
+**Protocol Analysers for Network Traffic**
 
 `tshark` is the commant line version of the wireshark, only available if wireshark is installed. Same options as tshark and more.
 
@@ -133,6 +134,31 @@ tcpdump -i any -s 65535 -w capturefile.cap # capture to a file with storage capa
 
 ---
 
+## Network Monitoring - Wireshark, tcpdump, tshark, iptables part 2
 
+**Wireshark GUI**
 
+```
+apt-get install wireshark
+```
 
+**Can use port mirroring functionality of `iptables`**
+
+```
+iptables -t mangle -A PREROUTING -s 192.168.ip.to.monitor -j TEE -gateway 192.168.1.wireshark
+```
+
+**SSH and capture the packets on the fly (no iptables configuration)**
+
+- `ssh root@192.168.1.1 -- "tcpdump -w - -s 65535 'not port 22' " > capture.cap`
+  - `s 65535`: full size packet capture
+  - `'not port 22'`: no capturing of the traffic that is relying back the tcp dump
+- import in wireshark
+
+**Pipe tcpdump to wireshark over SSH**
+
+- `ssh root@192.168.1.1 tcpdump -U -s 65535 -w - 'not part 22' | wireshark -k -i -`
+  - `-k -i`: send tcpdump into wireshark
+
+---
+---
