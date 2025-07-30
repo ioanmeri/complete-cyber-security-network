@@ -3,6 +3,7 @@
 - [Syslog](#syslog)
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-1)
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 2](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-2)
+- [Wireshark - Finding malware and hackers - Part 1](#wireshark---finding-malware-and-hackers---part-1)
 
 ---
 
@@ -161,4 +162,63 @@ iptables -t mangle -A PREROUTING -s 192.168.ip.to.monitor -j TEE -gateway 192.16
   - `-k -i`: send tcpdump into wireshark
 
 ---
+
+## Wireshark - Finding malware and hackers - Part 1
+
+Choose interface and click on start capturing, for each packet there is:
+- frame number
+  - In data link the units are kwown as frames
+  - ethernet frames, token ring frames, wi-fi, arp
+  - there is also hex for the data frame in here
+- time
+- source IP
+- destination IP
+- protocol
+- actual commands
+
+**Change IP to Domain Name**
+
+Edit > Preferences > Name Resolution > Resolve network (IP) adresses
+
+**Start a new live capture**
+
+By clicking on - shark - icon
+
+**Capture Options**
+
+Capture Filter: exactly the same as the `tcpdump`
+- IP address 192.168.0.1
+- TCP only
+- UDP only
+- DNS
+- Any from outside connecting to 192.168.1.40
+- Ports 80 443 53
+
+It's green if it's correct systax
+
+**Filter Expressions**
+
+Built in protocols that it understands
+
+- HTTP - Hypertext Transfer Protocol
+  - or just the frames that have cookies on them
+  - `http.set_cookie`
+
+**Look for suspicious traffic**
+
+- Start removing the traffic that you do understand, and you do know is valid
+  - valid pattern example
+  -  `not(tcp.port==80) and not(tcp.port==443) and not (udp.port==53)`
+-  can add more filters from frame
+  - right click on source > Apply as Filter > ... and not Selected
+  - it will add that destination on the filter
+- can remove only protocols
+  - `not dns || http || ssl`
+  - `not smb || nbns || dcerpc ||  nbss`
+  - `tcp.srcport==80`
+  - `ip.src==192.168.1.0/24 and ip.dst==192.168.1.0/24`
+  - `ip.dst==192.168.1.39 and !ip.src==192.168.1.0/24`
+    - from external to the internal
+
 ---
+
