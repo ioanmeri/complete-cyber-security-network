@@ -4,6 +4,7 @@
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 1](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-1)
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 2](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-2)
 - [Wireshark - Finding malware and hackers - Part 1](#wireshark---finding-malware-and-hackers---part-1)
+- [Wireshark - Finding malware and hackers - Part 2](#wireshark---finding-malware-and-hackers---part-2)
 
 ---
 
@@ -222,3 +223,30 @@ Built in protocols that it understands
 
 ---
 
+## Wireshark - Finding malware and hackers - Part 2
+
+If not HTTPS is used we can capture names and passwords and cookies
+- filter by `http` or `http.cookie`
+- look for POST: `http.request.method == POST`
+
+**Follow Stream**
+
+Right Click on a frame > Follow TCP Stream > We can see the conversation 
+
+**Statistics**
+
+Menu Statistics > Conversations > IPv4:19
+
+We can see the traffic and see if anything is getting out
+
+Right Click > Apply Filter
+
+**Show all the domains, domains that is enforced to resolve**
+
+Statistics > Show address resolution
+
+**Show all endpoints**
+
+Statistics > Endpoints > Right click > Selected > will filter all frames for that source
+
+---
