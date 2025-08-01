@@ -5,6 +5,7 @@
 - [Network Monitoring - Wireshark, tcpdump, tshark, iptables part 2](#network-monitoring---wireshark-tcpdump-tshark-iptables-part-2)
 - [Wireshark - Finding malware and hackers - Part 1](#wireshark---finding-malware-and-hackers---part-1)
 - [Wireshark - Finding malware and hackers - Part 2](#wireshark---finding-malware-and-hackers---part-2)
+- [Network Monitoring - Wincap, NST, Netminer and NetWorx](#network-monitoring---wincap-nst-netminer-and-networx)
 
 ---
 
@@ -250,3 +251,7 @@ Statistics > Show address resolution
 Statistics > Endpoints > Right click > Selected > will filter all frames for that source
 
 ---
+
+## Network Monitoring - Wincap, NST, Netminer and NetWorx
+
+Various tools for traffic analysis
