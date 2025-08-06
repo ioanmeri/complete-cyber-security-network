@@ -4,6 +4,7 @@ The objective of this section is to learn the techniques used by ISP, coorporati
 from cookies to supercookies, from HTTP ETags to web cache. The object of this sections is to understand how you are tracked and profiled online.
 
 - [Types of Tracking](#types-of-tracking)
+- [IP address](#ip-address)
 
 ---
 
@@ -26,5 +27,23 @@ There are many ways you can be tracked online. Different entities track you in d
 - **Radio - Wi-Fi / 3G / 4G** can be used to geographically locate you and possibly crack that communication to monitor you
 
 **Encrypting** the traffic is usually a strong roadblock to monitoring and cracking, but there are always way around that encryption
+
+---
+
+
+## IP address
+
+A basic way to identify you is by your IP address. It is registered in a address database which can reveal your city or area. The IP belongs to your router which is directly connected to the Internet.
+The IP address dynamically changes and it's assigned when you connect to the Internet. Usually, is kept the same IP until the router disconnects.
+
+Local IP address is different to the routers IP which is the actual IP address that other people will see when you are on the Internet.
+
+People on the Internet, cannot directly connect to you. They connect to the router and then through a process called NAT, Network Address Translation, and then forwarded it to you.
+
+```
+netstat -an
+```
+
+can see all the various connections out of this machine.
 
 ---
