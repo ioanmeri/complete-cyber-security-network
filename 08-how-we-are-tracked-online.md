@@ -5,6 +5,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 
 - [Types of Tracking](#types-of-tracking)
 - [IP address](#ip-address)
+- [3rd Party Connnections](#3rd-party-connnections)
 
 ---
 
@@ -47,3 +48,20 @@ netstat -an
 can see all the various connections out of this machine.
 
 ---
+
+## 3rd Party Connnections
+
+**Web Tracking: 3rd Party Connections**
+
+We can enable a proxy (Burp Suite) while connecting to a website, and see the actual request (HTTP request - text).
+
+In the responses we get, we can see that we don't only connect to the target website but also additional websites like `googletagmanager.com`
+and `google-analytics.com`
+
+The browser interacts with those 3rd party sites and those might even redirect you to a 4th party etc
+
+---
+
+
+
+
