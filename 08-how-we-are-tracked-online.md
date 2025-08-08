@@ -6,6 +6,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [Types of Tracking](#types-of-tracking)
 - [IP address](#ip-address)
 - [3rd Party Connnections](#3rd-party-connnections)
+- [HTTP Referer](#http-referer)
 
 ---
 
@@ -62,6 +63,25 @@ The browser interacts with those 3rd party sites and those might even redirect y
 
 ---
 
+## HTTP Referer
+
+A common method of tracking is the HTTP Referer, and it is an HTTP header.
+
+It tells a webpage which is the origin website you visited before landing in the current page.
+
+In the Burp Proxy we can see in a Request e.g.
+
+```
+Referer: http://www.forbes.com/
+```
+
+HTTP Referer is sent whenever you load content on a page from a third party. For example, if the web page includes an ad or a tracking script, the browser tells the advertiser or tracking network what page you are viewing.
+
+Another method they use it's called convertion pixels or audience segmentation pixels, which are tiny one by one pixels, which are essensially invisible images that use HTTP referer to track you without appearing on a website.
+
+HTTP referers are also used to track your emails, and if you email provider processes pictures automatically they can put in those little images pixels that reach out and connect to the relevant website with the HTTP referer, and therefore they've tracked your loading and use of that email.
+
+---
 
 
 
