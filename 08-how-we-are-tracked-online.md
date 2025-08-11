@@ -7,6 +7,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [IP address](#ip-address)
 - [3rd Party Connnections](#3rd-party-connnections)
 - [HTTP Referer](#http-referer)
+- [Cookies and Scripts](#cookies-and-scripts)
 
 ---
 
@@ -83,5 +84,36 @@ HTTP referers are also used to track your emails, and if you email provider proc
 
 ---
 
+## Cookies and Scripts
+
+Another way of tracking is cookies and scripts
+
+**Cookies**
+
+Cookies have plenty of legitimate uses, for example the session cookie to remember who you are so you don't have to refresh on every page.
+- It is persistent across all pages
+- All cookies from the target website are consider first party cookies
+- From another website are referred to as third party cookies
+  - include third party advertisements
+  - tracking and scripts
+  - google analytics are very common
+  - double click ads
+
+If two websites contain the same tracking network e.g. double click, then the tracking network knows that you are visiting both e.g. bbc, forbes and any other site with double click cookies
+
+Add-on: Cookies Manager
+
+Cookies are also used to hijack your session, via e.g. MITM attack can relay that cookie in the HTTP header and login as that user. That is why encryption is important.
+
+
+**Scripts**
+
+Scripts on social network can also function as tracking scripts, e.g. facebook like button in another website, facebook knows you visited that website
+
+Most websites contain google analytics scripts. So google will recording the websites you visit against your account (along with PII if you have provided or the SessionID which is tied to your browser)
+
+
+
+---
 
 
