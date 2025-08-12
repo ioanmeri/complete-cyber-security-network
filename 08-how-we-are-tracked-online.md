@@ -8,6 +8,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [3rd Party Connnections](#3rd-party-connnections)
 - [HTTP Referer](#http-referer)
 - [Cookies and Scripts](#cookies-and-scripts)
+- [Super Cookies](#super-cookies)
 
 ---
 
@@ -112,8 +113,50 @@ Scripts on social network can also function as tracking scripts, e.g. facebook l
 
 Most websites contain google analytics scripts. So google will recording the websites you visit against your account (along with PII if you have provided or the SessionID which is tied to your browser)
 
+---
 
+## Super Cookies
+
+Super cookies is a general term for methods designed to permanently track a user by placing within the browser something.
+
+They are more difficult for the user to detect and remove
+
+**Examples**
+
+- Evercookie
+- Local Shared Objects (Flash Cookies)
+- Silverlight Isolated Storage
+- Storing cookies in RGB values of auto-generated, force-cached PNGs using HTML5 Canvas tag to read pixels (cookies) back out
+- Storing cookies in Web History
+- Storing cookies in HTTP Etags
+- Storing cookies in Web cache
+- window.name caching
+- Internet Explorer userData storage
+- HTML5 Session Storage
+- HTML5 Local Storage
+- HTML5 Global Storage
+- HTML5 Database Storage via SQLite
+- HTML5 IndexedDB
+- Java JNLP PersistenceService
+- Java CVE-2013-0422 exploit (applet sandbox escaping)
+
+You might clear your browser cookies and not your flash cookies, so the website will copy the value of the flash cookie to your browser cookie
+
+Super Cookies are very resilient, cookies that are recreated after deleting from backup, stored outside the browser's dedicated cookie store are generally referred as **zombie cookie**
+
+**Injected Super Cookies**
+
+Everybody in the middle of a telco or HTTP request, like your ISP, they can insert cookies into your requests and into your responses and they can't be stripped out by the user.
+
+These super cookies allow ad networks and media publishers to follow people across the internet. It allows the networks to build up profiles on users habits and pitch them targeted advertising, while the telcos take a cut.
+
+**Book suggestion: The Rise of Mobile Tracking Headers: How Telcos Around the World Are threatening Your Privacy**
+
+The only way to stop the header from reporting back is to limit your web browser to HTTPs sites only. With end-to-end encryption is impossible to inject anything into it without breaking the crypto. But over HTTP is easy to insert things into your traffic like in the Burp Proxy.
 
 ---
+
+
+
 
 
