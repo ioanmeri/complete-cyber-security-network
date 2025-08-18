@@ -9,6 +9,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [HTTP Referer](#http-referer)
 - [Cookies and Scripts](#cookies-and-scripts)
 - [Super Cookies](#super-cookies)
+- [Browser Fingerprinting and Browser Volunteered Information](#browser-fingerprinting-and-browser-volunteered-information)
 
 ---
 
@@ -156,7 +157,36 @@ The only way to stop the header from reporting back is to limit your web browser
 
 ---
 
+## Browser Fingerprinting and Browser Volunteered Information
 
+When you visit a webpage, your browser voluntarily sends information about its configuration such as 
+- the user agents
+- the fonts that you use
+- your browser types
+- add-ons
 
+If this combination of information is unique enough, it may be possible to identify and track you.
 
+Ironically, plug-ins that you install to make you more secure, actually make you more unique
 
+Tool: Panopticlick, test your browser how unique it is
+
+The trick to **not** be fingerprinted is to be less unique, to be more default, to be more average
+
+**Other information browser leaks out**
+
+- IP Address
+- DNS
+- General location
+- Browser / Browser type
+- Accepting cookies
+- Screen size
+- Plugins
+- Headers
+- Mime Types
+  
+Tool: ipleak.net
+
+But if you remove the ability of your browser to give out information, you're going to remove functionality from your browser
+
+---
