@@ -10,6 +10,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [Cookies and Scripts](#cookies-and-scripts)
 - [Super Cookies](#super-cookies)
 - [Browser Fingerprinting and Browser Volunteered Information](#browser-fingerprinting-and-browser-volunteered-information)
+- [Browser and Browser Functionality](#browser-and-browser-functionality)
 
 ---
 
@@ -188,5 +189,32 @@ The trick to **not** be fingerprinted is to be less unique, to be more default, 
 Tool: ipleak.net
 
 But if you remove the ability of your browser to give out information, you're going to remove functionality from your browser
+
+---
+
+## Browser and Browser Functionality
+
+Your browser functionality can also give information to track you. For example
+- Geo location
+- Security features
+  - Safe Browsing
+  - Phishing protection
+- browser.send_pings
+- WebRTC
+  - can be used for tracking and IP discovery
+- Extensions and plugins
+  - WOTWeb of Trust
+  - HTML5 Canvas Fingerprinting (Using JS)
+- Browser history
+
+They can find info that is more relevant to you or rather advertising to you
+
+Tool: `www.browserleaks.com/geo`
+
+**Security Features**
+
+Browser have security features such as safe browsing and phishing protection. These beacon out every time you visit a website to check whether or not that site is known to have problems in relation to malware and phishing
+
+This is good for security but is a privacy problem
 
 ---
