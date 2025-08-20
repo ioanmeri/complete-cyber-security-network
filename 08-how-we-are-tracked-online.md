@@ -11,6 +11,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [Super Cookies](#super-cookies)
 - [Browser Fingerprinting and Browser Volunteered Information](#browser-fingerprinting-and-browser-volunteered-information)
 - [Browser and Browser Functionality](#browser-and-browser-functionality)
+- [More tracking](#more-tracking)
 
 ---
 
@@ -218,3 +219,26 @@ Browser have security features such as safe browsing and phishing protection. Th
 This is good for security but is a privacy problem
 
 ---
+
+## More tracking
+
+- Operating Systems
+  - modern OS send all sorts of information out (Windows 10)
+- Applications
+  - apps send out data
+- Security applications
+  - antivirus getting updates
+- Application designed to track
+  - spying apps
+- Malware (Keyloggers, RATs, Trojans)
+- Network devices (Routers, switches, firewalls)
+- DNS
+  - DNS queries can be logged by ISP
+  - DNS leaking when using a secured connection like VPN tunnel when requests are sent through the normal unencrypted network
+- Auto update
+- Any automatic connections
+- Error reports
+
+---
+
+
