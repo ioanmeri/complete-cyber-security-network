@@ -12,6 +12,7 @@ from cookies to supercookies, from HTTP ETags to web cache. The object of this s
 - [Browser Fingerprinting and Browser Volunteered Information](#browser-fingerprinting-and-browser-volunteered-information)
 - [Browser and Browser Functionality](#browser-and-browser-functionality)
 - [More tracking](#more-tracking)
+- [Browser and Internet Profiling](#browser-and-internet-profiling)
 
 ---
 
@@ -238,6 +239,58 @@ This is good for security but is a privacy problem
 - Auto update
 - Any automatic connections
 - Error reports
+
+---
+
+## Browser and Internet Profiling
+
+If your adversary has sufficient resources such as a nation state, the scale of their capability to track and monitor is at the population scale
+
+They can create internet usage profiles for every visible user. To do so they need to collect
+- cookies
+- super cookies
+- IPs
+- the fingerprint of the browser
+- referrers
+- metadata
+
+GCHQ calls these target detection identifiers or presence events. Once you have associations and links between them you can build a profile of an internet user and the internet user's usage.
+
+This is possible if traffic goes through equipment that they control or that they own
+
+If deals are made with companies like Google, Microsoft, Apple, Facebook, your ISP then they can instantly know who you are from information that you have given to these companies
+
+They may be associated with your browser, but if you targeted could be directed to you.
+
+Many people are actually de anonymized because they are careless in the early stages before they realize that they actually need security.
+
+Associations and profiles will be built from
+- browsing histories
+- chat and message communication
+- emails
+- Skype
+- text messages
+- cell mobile phone locations
+- social media interactions
+- Google searches
+- searches on Google Maps
+- visit to adult sites
+- news websites
+- chat forums
+- blogs
+- metadata about location movements
+- social media friends
+- metadata about passwords and emails
+- tools that enable browsing the internet anonymously
+
+Any activity you undertake to anonymize yourself could flag you for investigation
+- Googling VPN for example
+- using tor
+- reading about the dark web
+- doing this course
+
+Encryption does actually prevent most of this passive type collection, but nation states are working on ways to get around this through both 
+legislation and other technical means (cryptography)
 
 ---
 
