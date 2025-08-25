@@ -1,6 +1,7 @@
 # Search Engines and Privacy
 
 - [Goals and Learning Objectives](#goals-and-learning-objectives)
+- [Search Engine Tracking, Censorship and Privacy](#search-engine-tracking-censorship-and-privacy)
 
 ---
 
@@ -14,3 +15,30 @@ Understand the privacy and anonymity issues associated with the use of search en
 - what you can do to prevent it
 
 ---
+
+## Search Engine Tracking, Censorship and Privacy
+
+Google is not only a search engine, but offers many services which makes their ability to track you expodentially more powerfull.
+
+Other sites, help the search engines to track you, because embedded in other sites not owned by Google are Google analytics code, social media buttons and scripts
+
+Google has coorporate agreements with other websites to negotiate and share information to understand better who you are, so they can sell better to you
+
+If you are not logged in to Google, it will recognise the browser because of the persistent cookies, NID and SID
+
+Terms of use tool: `https//tosdr.org/`
+
+Your search engine will be used to enforce censorship. The content you view will be manipulated or customized based on your search history, a form of corporate censorship.
+
+For example, you may be given a more expensive price for a service based on you history, your demographic, your browser, and your spending habits.
+
+More traditional form of censorship, is nation state sponsors censorship like China's blocking of Google results relating to the 25th anniversary of the Tiananmen sqaure protests
+
+Memory Hole system: logs queries entered into search engines and associates each search with an IP address
+
+Marbled gecko: Information about the use of Google Earth and Google Maps
+
+---
+
+
+
