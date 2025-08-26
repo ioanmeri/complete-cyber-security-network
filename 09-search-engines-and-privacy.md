@@ -2,6 +2,7 @@
 
 - [Goals and Learning Objectives](#goals-and-learning-objectives)
 - [Search Engine Tracking, Censorship and Privacy](#search-engine-tracking-censorship-and-privacy)
+- [ixquick and Startpage](#ixquick-and-startpage)
 
 ---
 
@@ -37,6 +38,23 @@ More traditional form of censorship, is nation state sponsors censorship like Ch
 Memory Hole system: logs queries entered into search engines and associates each search with an IP address
 
 Marbled gecko: Information about the use of Google Earth and Google Maps
+
+---
+
+## ixquick and Startpage
+
+Alternative search engines that help protect your privacy and anonymity and bypass censorship
+
+> The IP address that is associated with your search will NOT be recorded or shared
+
+Google will be able to identify your browser from the visited website, because of the google scripts it contains
+
+You need to disable cookies and other tracking methods in advance of using `startpage` for Google
+
+Instead, you can use the Proxy method in startpage and the IP of the proxy will be presented to the website and cookies won't be stored in the browser
+- On the downside, the proxy is slowwer
+
+Tool to check the SSL cipher: `ssllabs.com`
 
 ---
 
