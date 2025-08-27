@@ -3,6 +3,7 @@
 - [Goals and Learning Objectives](#goals-and-learning-objectives)
 - [Search Engine Tracking, Censorship and Privacy](#search-engine-tracking-censorship-and-privacy)
 - [ixquick and Startpage](#ixquick-and-startpage)
+- [DuckDuckGo](#duckduckgo)
 
 ---
 
@@ -58,5 +59,24 @@ Tool to check the SSL cipher: `ssllabs.com`
 
 ---
 
+## DuckDuckGo
 
+DuckDuckGo is another privacy focused meta search engine based in USA
 
+Search results are from multiple sources including Yahoo, Search Boss, Wikipedia, Wolfram, Alpha, Bing
+
+Again, if you go to a site that has Google code on it (Google Analytics / social media buttons), Google still could identify you and track  you
+
+> DuckDuckGo does not collect or share personal information. That is our privacy policy in a nutshell
+
+- They don't store IP addresses
+- Log user information
+- Browser information
+- Uses cookies only when needed
+
+TLS cipher is good, A plus rating with SSL labs
+
+- DuckDuckGo is also available as a hidden service within TOR
+- available as html only for when maximum security is required / JS needs to be disabled
+
+---
