@@ -4,6 +4,7 @@
 - [Search Engine Tracking, Censorship and Privacy](#search-engine-tracking-censorship-and-privacy)
 - [ixquick and Startpage](#ixquick-and-startpage)
 - [DuckDuckGo](#duckduckgo)
+- [Disconnect search](#disconnect-search)
 
 ---
 
@@ -80,3 +81,19 @@ TLS cipher is good, A plus rating with SSL labs
 - available as html only for when maximum security is required / JS needs to be disabled
 
 ---
+
+## Disconnect search
+
+`https://search.disconnect.me/`
+
+They offer private browsing and private search. It's another privacy focused meta search engine based in USA.
+
+> We don't log your searches, IP addresses, or any other personal info
+
+Again, if you go to any site, if the site has Google code on it like analytics Google Media buttons, google can still identify you
+
+Can use the extension or desktop / mobile application
+
+---
+
+
