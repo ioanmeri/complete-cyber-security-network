@@ -5,6 +5,7 @@
 - [ixquick and Startpage](#ixquick-and-startpage)
 - [DuckDuckGo](#duckduckgo)
 - [Disconnect search](#disconnect-search)
+- [YaCy](#yacy)
 
 ---
 
@@ -96,4 +97,26 @@ Can use the extension or desktop / mobile application
 
 ---
 
+## YaCy
 
+Free open source search engine application.
+
+It creates a local proxy on your machine on port 8090 that you automatically connect to through your browser
+
+Can be used to build a search portal for your own internal network, your own websites or search the Internet
+
+YaCy is a distributed search engine, or a peer-to-peer search engine. It works by connecting a network of people who are all also running instances of YaCy and are crawling the web to create a distributed index of sites.
+
+So there's no centralized authority or server where your searches are stored and no single party is in charge
+
+Centralized search engines are a signle point of security failure
+
+A distributed search engine is not susceptible to an advesary attack
+
+It also works well against censorship, but search results will not be as accurate as the centralized search engines
+
+YaCy's is like Tor. The more people use it, the better it will become but it needs community support
+
+The communication isn't encrypted so for privacy and anonymity you need to use an anonymizing service (VPNs, Tor, Johndon etc)
+
+---
