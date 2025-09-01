@@ -6,6 +6,7 @@
 - [DuckDuckGo](#duckduckgo)
 - [Disconnect search](#disconnect-search)
 - [YaCy](#yacy)
+- [Private and Anonymous Searching](#private-and-anonymous-searching)
 
 ---
 
@@ -120,3 +121,33 @@ YaCy's is like Tor. The more people use it, the better it will become but it nee
 The communication isn't encrypted so for privacy and anonymity you need to use an anonymizing service (VPNs, Tor, Johndon etc)
 
 ---
+
+## Private and Anonymous Searching
+
+For Basic Private Protection
+- Enable private browsing
+- Use HTTPs
+- User privacy focused search engine
+  - lxquick, Startpage, Duckduckgo, Disconnect & Yacy
+
+To fully mitigate against privacy and anonymity invasion, you need:
+- Hardened Browser
+- Use anonymising services (VPNs, JonDonym, Tor etc.)
+
+You can turn off google history for 
+- Web & App Search Activity
+- Voice & Audio
+- Device information
+- Location History
+- YouTube Watch History
+- YouTube Search History
+
+you may want to delete all of this. All those are logged against your browser / not the account
+
+It's simple then to cross-reference it as being you
+
+Also can disable future use of the logging of those services
+
+---
+
+
