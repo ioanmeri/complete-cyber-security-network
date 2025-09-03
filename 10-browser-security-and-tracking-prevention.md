@@ -1,6 +1,7 @@
 # Section 10: Browser Security and Tracking Prevention
 
 - [Which Browser](#which-browser)
+- [Reducing the Browser Attack Surface](#reducing-the-browser-attack-surface)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -43,3 +44,14 @@ Debian: Iceweasel Browser / Fork of Firefox
 
 ---
 
+## Reducing the Browser Attack Surface
+
+- Disable, remove or uninstall anything that you don't use
+  - especially those that use the internet: browsers, browsers plugins and extensions
+- Disable or limit Java, Flash, Silverlight
+- Disable or limit Javascript, browser applications e.g. PDF reader
+  - JS is needed but can be a security problem e.g. malvertising using JS
+  - Plugin "QuickJava" to enable disable JS / Java /Flash but not Flash
+  - If anonymity is a priority, JS has to be disabled
+
+---
