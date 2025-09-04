@@ -2,6 +2,7 @@
 
 - [Which Browser](#which-browser)
 - [Reducing the Browser Attack Surface](#reducing-the-browser-attack-surface)
+- [Browser Hacking Demo](#browser-hacking-demo)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -9,7 +10,7 @@ How browsers are hacked and methods to mitigate all those attack vectors
 
 ---
 
-## Which Browser - Choice of Browser
+## Which Browser 
 
 **Browsers**
 - Opera
@@ -55,3 +56,27 @@ Debian: Iceweasel Browser / Fork of Firefox
   - If anonymity is a priority, JS has to be disabled
 
 ---
+
+## Browser Hacking Demo
+
+To attack the browser, I need to get something to run in this browser.
+
+Example: Use JavaScript to send my payload
+
+- Send an email with JS embedded in the email, if your email client runs scripts, it will be executed
+- Cross site scripting vulnerabilites for sites that you are using, embed scripts in legitimate sites
+- Buy an ad from an ad network and embed the script
+- Send a link with a script that is running in the website to visit
+  - e.g. using BeEF in Kali linux and be able to see the connected browser
+    - can use the command "Fake Notification Bar"
+    - "Pretty Theft" command to steal credentials
+    - "Google Phishing"
+  - Reserve shell and run commands
+
+Once even the smallest amount of script is run within your browser, you can do all of those social engineering attacks,
+and then if you're not patched or there is exploits available, or zero-day exploits, you can create reverse shells.
+
+---
+
+
+
