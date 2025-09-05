@@ -3,6 +3,7 @@
 - [Which Browser](#which-browser)
 - [Reducing the Browser Attack Surface](#reducing-the-browser-attack-surface)
 - [Browser Hacking Demo](#browser-hacking-demo)
+- [Browser Isolation and Compartmentalization](#browser-isolation-and-compartmentalization)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -75,6 +76,22 @@ Example: Use JavaScript to send my payload
 
 Once even the smallest amount of script is run within your browser, you can do all of those social engineering attacks,
 and then if you're not patched or there is exploits available, or zero-day exploits, you can create reverse shells.
+
+---
+
+## Browser Isolation and Compartmentalization
+
+One of the best methods to protect against hacking and tracking is isolation and compartmentalization
+
+- Consider the sandboxing and running the browser in a virtual machine
+- if you can use a VM and a sandbox, will provide you isolation from your browser and OS
+- cloud browsers will protect you from hackers and malware but they are a privacy concern
+- "Browser in the Box" application that running in a VM
+- Firefox profiles - completely separate configuration / addons for profiles e.g. testing extension
+- Firefox contextual identities
+- Priv8 / Multifox addons - manage tabs on sandboxes for increased security
+
+If it really matters to you to not have cross-contamination between contextual identities, you need physical isolation
 
 ---
 
