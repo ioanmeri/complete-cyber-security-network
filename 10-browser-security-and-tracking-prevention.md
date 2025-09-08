@@ -4,6 +4,7 @@
 - [Reducing the Browser Attack Surface](#reducing-the-browser-attack-surface)
 - [Browser Hacking Demo](#browser-hacking-demo)
 - [Browser Isolation and Compartmentalization](#browser-isolation-and-compartmentalization)
+- [Firefox Security, Privacy and Tracking](#firefox-security-privacy-and-tracking)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -92,6 +93,40 @@ One of the best methods to protect against hacking and tracking is isolation and
 - Priv8 / Multifox addons - manage tabs on sandboxes for increased security
 
 If it really matters to you to not have cross-contamination between contextual identities, you need physical isolation
+
+---
+
+## Firefox Security, Privacy and Tracking
+
+- Firefox has - Do not track - feature
+  - adds a `DNT: 1` flag in HTTP headers - voluntarily policy
+- Firefox has - Use Tracking Protection in Private Windows
+  -  option (disconnect.me): will block requests to tracking sites
+- Firefox has noscript extension
+- Chrome has better sandboxing
+- Google is the biggest coorporate tracker of all Internet users
+
+Testing tool: `itisatrap.org`
+
+- Firefox has "Never remember history" option
+  - will prevent much of the tracking e.g will not store local shared objects / flash cookies
+  - it will also stop sites from remembering preferences e.g. language
+- Firefox has Private Browsing feature
+  - means "Never remember history" for that window
+
+**Settings options**
+
+- Warn me when sites try to install add-ons
+- Block reported attack sites
+- Block reported web forgeries (service provided by Google: `safebrowsing.google.com`)
+- Remember logins (use alternative password managers)
+- Master password (use alternatives)
+
+Look browsers connections:
+
+```
+about:networking
+```
 
 ---
 
