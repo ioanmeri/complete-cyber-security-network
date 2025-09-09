@@ -5,6 +5,7 @@
 - [Browser Hacking Demo](#browser-hacking-demo)
 - [Browser Isolation and Compartmentalization](#browser-isolation-and-compartmentalization)
 - [Firefox Security, Privacy and Tracking](#firefox-security-privacy-and-tracking)
+- [uBlock origin - HTTP Filters, ad and track blockers](#ublock-origin---http-filters-ad-and-track-blockers)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -130,5 +131,20 @@ about:networking
 
 ---
 
+## uBlock origin - HTTP Filters, ad and track blockers
+
+Methods to block undesirable malware, ads, malvertisement, phishing links and tracking methods with 
+- HTTP filtering
+  - also speed up your browser
+- Script blocking
+
+**Security extensions for Firefox**
+- uBlock Origin
+  - open source
+  - `about:memory` to check memory usage
+  - can block e.g. images / 3rd-party / inline-scripts / 2mdn.net domain etc globally or per site
+  - provides documentation for easy / medium / hard mode
+
+---
 
 
