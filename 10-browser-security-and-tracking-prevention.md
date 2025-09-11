@@ -7,6 +7,7 @@
 - [Firefox Security, Privacy and Tracking](#firefox-security-privacy-and-tracking)
 - [uBlock origin - HTTP Filters, ad and track blockers](#ublock-origin---http-filters-ad-and-track-blockers)
 - [uMatrix - HTTP Filters, ad and track blockers](#umatrix---http-filters-ad-and-track-blockers)
+- [Disconnect, Ghostery, Request policy - HTTP Filters, ad and track blockers](#disconnect-ghostery-request-policy---http-filters-ad-and-track-blockers)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -163,3 +164,15 @@ Methods to block undesirable malware, ads, malvertisement, phishing links and tr
 
 ---
 
+## Disconnect, Ghostery, Request policy - HTTP Filters, ad and track blockers
+
+Disconnect is a private browser, similar to uBlock origin, open source and free for non technical users
+- only blocks what it considers privacy invasive
+
+Ghostery is similar to disconnect and uBlock origin. Was bought by an ad company. 
+They sell user data without any private information.
+
+Request policy is a Firefox addon that blocks all cross-site requests unless you allow them.
+This prevents unwanted connections to 3rd parties to protect you against XSS.
+
+---
