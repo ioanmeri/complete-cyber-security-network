@@ -8,6 +8,7 @@
 - [uBlock origin - HTTP Filters, ad and track blockers](#ublock-origin---http-filters-ad-and-track-blockers)
 - [uMatrix - HTTP Filters, ad and track blockers](#umatrix---http-filters-ad-and-track-blockers)
 - [Disconnect, Ghostery, Request policy - HTTP Filters, ad and track blockers](#disconnect-ghostery-request-policy---http-filters-ad-and-track-blockers)
+- [ABP, Privacy badget, WOT - HTTP Filters, ad and track blockers](#abp-privacy-badget-wot---http-filters-ad-and-track-blockers)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -176,3 +177,26 @@ Request policy is a Firefox addon that blocks all cross-site requests unless you
 This prevents unwanted connections to 3rd parties to protect you against XSS.
 
 ---
+
+## ABP, Privacy badget, WOT - HTTP Filters, ad and track blockers
+
+Add Block Plus is a very popular ad blocker which shows acceptable ads by default, more like an install and let it work type of plugin for non technical users (EasyList is used in uBlock anyway)
+
+Privacy Badget is another HTTP filter to block adverts and malware, developed by EFF. Developed by the need for an extension to automatically analyze and block any traffic or ad that violated the principle of user consent, which would work well without settings or knowledge by the user. Primary a privacy tool not an ad blocker.
+
+WOT Web of Trust plugin informs you about what websites are trusted and untrusted based on community distribution
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
