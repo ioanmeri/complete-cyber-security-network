@@ -9,6 +9,7 @@
 - [uMatrix - HTTP Filters, ad and track blockers](#umatrix---http-filters-ad-and-track-blockers)
 - [Disconnect, Ghostery, Request policy - HTTP Filters, ad and track blockers](#disconnect-ghostery-request-policy---http-filters-ad-and-track-blockers)
 - [ABP, Privacy badget, WOT - HTTP Filters, ad and track blockers](#abp-privacy-badget-wot---http-filters-ad-and-track-blockers)
+- [No-script - HTTP Filters, ad and track blockers](#no-script---http-filters-ad-and-track-blockers)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -188,11 +189,35 @@ WOT Web of Trust plugin informs you about what websites are trusted and untruste
 
 ---
 
+## No-script - HTTP Filters, ad and track blockers
 
+**NoScript Security Suite**
 
+NoScript FireFox extension allows active content to run only from sites that you trust
+- protects you against XSS
+- clickjacking attacks
+- by default blocks all scripts from all domains
 
+allows you to lock down what scripts can do and where.
 
+Main extension used by the Tor Browser to restrict the functionality of the browser
 
+- Can also disable Java / Flash / Silverlight / Audio / Video / Frames / Fonts
+- XSS protection
+- Enable Automatic Secure Cookies Management
+- Forse HTTPS 
+
+The problem is, most sites to work correctly need JavaScript (active content which is disable by default)
+- should only be used when you don't want to be tracked
+
+If you want high levels of security and privacy, you have to block scripts and at the same time accept that most sites you visit
+won't work correctly.
+
+Better middleground is the uBlock origin and uMatrix with balance between security and usability
+
+NoScript is best for a browser profile that you want to completely lockdown
+
+---
 
 
 
