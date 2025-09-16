@@ -10,6 +10,7 @@
 - [Disconnect, Ghostery, Request policy - HTTP Filters, ad and track blockers](#disconnect-ghostery-request-policy---http-filters-ad-and-track-blockers)
 - [ABP, Privacy badget, WOT - HTTP Filters, ad and track blockers](#abp-privacy-badget-wot---http-filters-ad-and-track-blockers)
 - [No-script - HTTP Filters, ad and track blockers](#no-script---http-filters-ad-and-track-blockers)
+- [Policeman and others - HTTP Filters, ad and track blockers](#policeman-and-others---http-filters-ad-and-track-blockers)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -219,7 +220,21 @@ NoScript is best for a browser profile that you want to completely lockdown
 
 ---
 
+## Policeman and others - HTTP Filters, ad and track blockers
 
+Policeman addon has a purpose similar to request policy and no script
+- it supports rules based on content type
+  - e.g. allow img, styles but not scripts / frames
+
+can write advanced rules and also act as a black list
+
+Tool: virustotal.com site to check suspicious websites
+
+Company offering tracking protection: trackoff.com
+
+Addblocker for iOS: Purify Blocker
+
+---
 
 
 
