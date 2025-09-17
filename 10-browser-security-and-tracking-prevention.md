@@ -11,6 +11,7 @@
 - [ABP, Privacy badget, WOT - HTTP Filters, ad and track blockers](#abp-privacy-badget-wot---http-filters-ad-and-track-blockers)
 - [No-script - HTTP Filters, ad and track blockers](#no-script---http-filters-ad-and-track-blockers)
 - [Policeman and others - HTTP Filters, ad and track blockers](#policeman-and-others---http-filters-ad-and-track-blockers)
+- [History, Cookies and Super cookies](#history-cookies-and-super-cookies)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -235,6 +236,51 @@ Company offering tracking protection: trackoff.com
 Addblocker for iOS: Purify Blocker
 
 ---
+
+## History, Cookies and Super cookies
+
+All of these can be used to track you online, affect your privacy and can be used as evidence if there is a local forencic examination
+
+Even if you set "Never remember history", the browser plugins and extensions will still retain some information
+
+**List of objects that can be used to track you**
+
+- History
+- Searches
+- Cookies
+- Temporary Files
+- Downloads
+- Searchbox and findbox text
+- Bookmarks
+- HTTP auth, SSL state
+- OCSP state
+- Site-specific content preferences (including HSTS state)
+- Content and image cache
+- Offline cache
+- Offline storage
+- Super Cookies
+- Crypto tokens
+- DOM storage
+- The safe crowsing key
+- Google wifi geolocation token
+- Plugin and extensions data e.g. NoScript's site and temprary permissions, and all other browser site permissions. uBlock origin and uMatrix settings etc.
+
+Full cache: `about:cache`
+
+**Best practices**
+
+- use a non-persistent OS
+  - tails, nopix, live, debian, VN snapshot
+  - no data is ever permanently stored
+- when you accept cookies from a website, that site can track you through cookies
+  - clear cookies
+- can clear history // only superficial
+- Evidence elimination tools: CC cleaner, BleachBit
+  - add extra signatures to the cleaners, 2000+ applications evidence
+
+---
+
+
 
 
 
