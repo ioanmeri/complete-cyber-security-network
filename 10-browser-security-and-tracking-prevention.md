@@ -278,6 +278,32 @@ Full cache: `about:cache`
 - Evidence elimination tools: CC cleaner, BleachBit
   - add extra signatures to the cleaners, 2000+ applications evidence
 
+**Mitigation Add-ons**
+- Better privacy: extension to find and delete super cookies, local shared objects etc
+- Click & Clean: browser history, erase temporary history files, cookies, flash LSOs etc
+- QuickJava: enable / disable Java, JS, cookies, images, animations, styles, proxies
+- Advanced Cookie Manager: cookie manager with advanced features e.g. export inport
+- Self-Destructing Cookies: deletes cookies and local storage
+- Decentraleyes: CDNs can track you and this plugin protects you against centralised content
+  - works well with uBlock origin and uMatrix
+
+**Mitigation Tools**
+ - Hidden Operating System from veracrypt against local forensic examination of history
+ - Portable Firefox in encrypted hidden containers
+ - JonDoFox portable firefox
+ - Tor Browser
+
+Tool to create super-cookie: `samy.pl/evercookie`, stores values in:
+- userData
+- cookieData
+- localData
+- sessionData
+- pngData
+- etagData
+- cacheData
+- lsoData
+- slData
+
 ---
 
 
