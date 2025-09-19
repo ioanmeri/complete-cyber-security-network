@@ -12,6 +12,7 @@
 - [No-script - HTTP Filters, ad and track blockers](#no-script---http-filters-ad-and-track-blockers)
 - [Policeman and others - HTTP Filters, ad and track blockers](#policeman-and-others---http-filters-ad-and-track-blockers)
 - [History, Cookies and Super cookies](#history-cookies-and-super-cookies)
+- [HTTP Referer](#http-referer)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -306,9 +307,15 @@ Tool to create super-cookie: `samy.pl/evercookie`, stores values in:
 
 ---
 
+## HTTP Referer
 
+- another method for tracking with HTTP header: Referer
+- the browser load the webpage you clicked and tells the website where you came from
+- Add-ons: Smart Referer
+- `about:config`: `Network.http.sendRefererHeader` change to 0 to disable referer
+- uMatrix can spoof the referer
 
-
+---
 
 
 
