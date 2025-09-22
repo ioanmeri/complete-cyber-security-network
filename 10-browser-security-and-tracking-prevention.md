@@ -13,6 +13,7 @@
 - [Policeman and others - HTTP Filters, ad and track blockers](#policeman-and-others---http-filters-ad-and-track-blockers)
 - [History, Cookies and Super cookies](#history-cookies-and-super-cookies)
 - [HTTP Referer](#http-referer)
+- [Browser Fingerprinting](#browser-fingerprinting)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -316,6 +317,59 @@ Tool to create super-cookie: `samy.pl/evercookie`, stores values in:
 - uMatrix can spoof the referer
 
 ---
+
+## Browser Fingerprinting
+
+When you visit a webpage, your browser voluntarily sends information about it's configuration, such as:
+- the user agent
+- browser type
+- add-ons
+
+Sites may query the browser for extra insights.
+
+If the combination of information is unique enought, it may be possible to identify and track you. This is browser fingerprinting, does not require cookies at all.
+
+**Attack vectors that make you unique**
+
+- Plugins
+- HTML5 Canvas Image Extraction
+- Open TCP Port and Local Network Fingerprinting
+- Invasive Authentication Mechanisms (NTLM and SPNEGO)
+- USB Device ID Enumeration via the GamePad API
+- Fonts
+- Monitor, Widget, and OS Desktop Resolution
+- Display Media information
+- WebGL
+- User Agent and HTTP Headers
+- Locale Fingerprinting
+- Timezone and Clock Offset
+- Javascript Performance Fingerprinting
+- Keystroke Fingerprinting
+- Operating System Type Fingerprinting
+
+**Enumeration**
+- Disabling Javascript isn't necessarily going to prevent enumeration
+
+**Tools**
+
+- ipleak.net
+- browserleaks.com
+- Extension: Random Agent Spoofer ➡️ will randomize your user agent
+- Extension: CanvasBlocker ➡️ Blocks the JS-API for modifying canvas to prevent Canvas-Fingerprinting
+- panopticlick.eff.org
+- samy.pl
+
+**Mitigation techniques**
+
+- Uniformity
+  - looking the same as many other browsers / default install
+  - Virtual machines
+  - Live OS
+- Randomization
+
+---
+
+
 
 
 
