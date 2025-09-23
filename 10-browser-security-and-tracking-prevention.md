@@ -14,6 +14,7 @@
 - [History, Cookies and Super cookies](#history-cookies-and-super-cookies)
 - [HTTP Referer](#http-referer)
 - [Browser Fingerprinting](#browser-fingerprinting)
+- [Certificates and Encryption](#certificates-and-encryption)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -369,7 +370,35 @@ If the combination of information is unique enought, it may be possible to ident
 
 ---
 
+## Certificates and Encryption
 
+Tool: www.eff.org/https-Everywhere
+- can enable HTTPS encryption automatically on sites that are known to support it
+- can block all HTTP requests
+- SSL observatory
 
+Extension: Certificate Patrol 
+- reveals when certificates are updated
+
+Extension: Perspectives
+- checks certificates with network notary
+- protects against fake certificates
+
+Tool: trax.x10.mx
+- scans and audits trusted root CAs
+
+Extensions 
+- Calomel SSL Validation
+- CipherFox
+  - Displays the current SSL/TLS cipher, protocol and certificate chain
+
+```
+about: config
+```
+type: security.ssl3 // remove weak ciphers
+
+Tool: ssllabs.com/ssltest
+
+---
 
 
