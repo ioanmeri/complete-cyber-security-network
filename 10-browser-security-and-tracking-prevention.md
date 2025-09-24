@@ -15,6 +15,7 @@
 - [HTTP Referer](#http-referer)
 - [Browser Fingerprinting](#browser-fingerprinting)
 - [Certificates and Encryption](#certificates-and-encryption)
+- [Firefox Hardening](#firefox-hardening)
 
 How to better reduce the attack surface of your browser and harder it for maximum security and privacy.
 
@@ -401,4 +402,37 @@ Tool: ssllabs.com/ssltest
 
 ---
 
+## Firefox Hardening
 
+- `about:config`
+- Tool: ffprofile.com
+  - will create a FireFox profile to import into your browser
+  - Disable phishing protection
+  - Disable malware scan
+  - Website Tracking
+  - Fake another useragent
+  - Block Cookies
+  - Block referer
+  - Disable DOM storage (super cookies)
+  - Disable Search Suggestions
+  - Disable Search Keyword
+  - Disable Fixup URLs
+  - Disable WebGL
+  - Disable automatic updates
+  - Disable Pocket integration
+  - Disable Mozilla Help
+  - Addons
+- Repo: Github `pyllyukko/user.js`
+  - user.js
+  - Drop it in Firefox and the settings take effect for that profile
+- Remove Certificate Authorities you don't trust
+- Extension: Privacy Settings
+- Defense in Depth
+  - Isolation and Compartmentalization
+  - Sanboxes
+  - VMs
+  - JonDoFox
+  - Tor Browser
+- Keep the browser and extensions up to date
+
+---
