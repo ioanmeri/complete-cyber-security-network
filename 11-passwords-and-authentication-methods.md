@@ -2,6 +2,7 @@
 
 - [Goals and Learning Objectives](#goals-and-learning-objectives)
 - [Passwords](#passwords)
+- [How Passwords are Cracked - Hashes](#how-passwords-are-cracked---hashes)
 
 ## Goals and Learning Objectives
 
@@ -36,3 +37,55 @@ Search to see if any of your previous or current passwords associated with any o
 A password is as secure, as the least secure place it is being used
 
 ---
+
+## How Passwords are Cracked - Hashes
+
+**3 ways to crack passwords**
+
+- Dictionary attacks
+  - common passwords from words lists
+- Brute force attacks
+  - try every single password possibility
+- Hybrid attacks
+  - psychology of human behavior combined with a dictionary
+
+Tools:
+
+- hashcat.net
+  - combinator attacks
+  - rule-based attacks
+- thesprawl.org
+  - analyze password patterns
+- Leet
+- Markov chain
+- hydra kali linux
+
+Password attack can be:
+- Online
+  - hacker interacts with the system
+  - e.g. a dictionary attack in a network based service
+  - extremely slow because of the response of the crypto system (e.g. 1 sec per second)
+  - can block the IP of attacker once a certain number of attempts have been made / can inform user, admin
+- Offline
+  - Attackers have access to the password hashes
+  - No interaction with the crypto system
+  - cannot use rainbow tables 
+
+Tools:
+- sha1-online.com
+- PBKDF2 hash generator
+
+Use of key streching / derivation functions results in better cryptographic results
+- passwords will take too long to crack even if someone steals the hashes
+
+**Other way to strengthen the passwords hashes**
+ - Use another secret key to encrypt the hash
+ - Include the secret key in the hash using a keyed hash algorithm
+
+Ideally the second key should be in another location separate from when you store the first key
+
+Best way: Hardware security module
+
+---
+
+
