@@ -3,6 +3,7 @@
 - [Goals and Learning Objectives](#goals-and-learning-objectives)
 - [Passwords](#passwords)
 - [How Passwords are Cracked - Hashes](#how-passwords-are-cracked---hashes)
+- [How Passwords are Cracked - Hashcat](#how-passwords-are-cracked---hashcat)
 
 ## Goals and Learning Objectives
 
@@ -88,4 +89,31 @@ Best way: Hardware security module
 
 ---
 
+## How Passwords are Cracked - Hashcat
+
+Password hashes can be stolen by:
+- SQL attacks
+- extracting from OS
+  - live mount CD
+  - pwdump7 tool
+ 
+Can be much faster than online attacks: 100 B guesses / second
+
+Kali linux tool to analyze hash: `hashid`:
+
+- Can use a dictionary attack
+- `hashcat -m 0 hashes.txt wordlist.txt -o crackedhashes.txt` - MD5
+- `hashcat -m 0 hashes.txt wordlist.txt -o crackedhashes.txt -a 1` - 1 for combination attack
+
+Rules: hashcat.net
+
+Online cracking tools:
+- raymond.cc
+
+If the right hash, key derivation function, key length and password has been chosen then it's unlikely to be cracked even with all the power.
+
+If you are a MITM, instead of cracking it you just forward it on after you have captured it.
+- NTLM hashes can be relayed with metasploit
+
+---
 
