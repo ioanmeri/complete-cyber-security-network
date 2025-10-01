@@ -4,6 +4,7 @@
 - [Passwords](#passwords)
 - [How Passwords are Cracked - Hashes](#how-passwords-are-cracked---hashes)
 - [How Passwords are Cracked - Hashcat](#how-passwords-are-cracked---hashcat)
+- [Operating System Passwords](#operating-system-passwords)
 
 ## Goals and Learning Objectives
 
@@ -117,3 +118,18 @@ If you are a MITM, instead of cracking it you just forward it on after you have 
 
 ---
 
+## Operating System Passwords
+
+- OS passwords provides zero security against someone with physical access to the device
+- password can be bypassed simply by booting your device with another OS
+  - live CD, connect hard drive to another machine
+- the hash can be simply replaced creating a new working password
+  - with linux you boot it up
+  - edit the group parameters from recovery mode to a bash shell
+  - remount the root partition
+  - use the passwd command to change the password
+- to slow down the process you can add 2FA login, YubiKey
+- what does work is whole disk encryption
+  - password is used as a key
+
+---
