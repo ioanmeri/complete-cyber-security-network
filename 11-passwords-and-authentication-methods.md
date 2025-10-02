@@ -5,6 +5,7 @@
 - [How Passwords are Cracked - Hashes](#how-passwords-are-cracked---hashes)
 - [How Passwords are Cracked - Hashcat](#how-passwords-are-cracked---hashcat)
 - [Operating System Passwords](#operating-system-passwords)
+- [Password Managers](#password-managers)
 
 ## Goals and Learning Objectives
 
@@ -133,3 +134,25 @@ If you are a MITM, instead of cracking it you just forward it on after you have 
   - password is used as a key
 
 ---
+
+## Password Managers
+
+Password managers are secure stores for sensitive data
+- username
+- password
+- credit card data
+- PIN numbers
+- access codes
+
+and enable you to have strong and unique passwords
+
+- you choose a random generated password
+- is locked using a master password (you need to remember / must be very strong)
+
+**Categories of Password Managers**
+- Local
+- Cloud
+  - can share the information between devices
+
+---
+
