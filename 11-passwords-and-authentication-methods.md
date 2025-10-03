@@ -6,6 +6,7 @@
 - [How Passwords are Cracked - Hashcat](#how-passwords-are-cracked---hashcat)
 - [Operating System Passwords](#operating-system-passwords)
 - [Password Managers](#password-managers)
+  - [Master Password](#master-password)
 
 ## Goals and Learning Objectives
 
@@ -155,4 +156,21 @@ and enable you to have strong and unique passwords
   - can share the information between devices
 
 ---
+
+## Master Password
+
+Tool: masterpasswordapp.com
+
+Stateless password generator
+- passwords are generated on demand
+  - from name, site, master password
+  - autogenerates passwords
+- No need to do backups, internet access in not needed
+  - lowest attack surface / stateless ➡️ don't even need to store the passwords
+  - simply nothing stored
+- Cannot use usernames, form filling, secure notes, credit cards
+
+---
+
+
 
