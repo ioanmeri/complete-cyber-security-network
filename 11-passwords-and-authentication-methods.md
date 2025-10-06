@@ -7,6 +7,7 @@
 - [Operating System Passwords](#operating-system-passwords)
 - [Password Managers](#password-managers)
   - [Master Password](#master-password)
+  - [KeePass, KeePassX and KeyPassXC](#keepass-keepassx-and-keypassxc)
 
 ## Goals and Learning Objectives
 
@@ -171,6 +172,30 @@ Stateless password generator
 - Cannot use usernames, form filling, secure notes, credit cards
 
 ---
+
+## KeePass, KeePassX and KeyPassXC
+
+Recommendation for Local Password Manager for Linux and Mac
+- Keypass
+- KeypassX
+- KeypassXC
+
+You passwords are in a local encrypted database
+- need a master password (very strong) in order to decrypt the database
+- 2FA login option
+  - supports yubikey authentication
+- autogenerates passwords with settings
+- uses AES 128-bit using 256-bit key
+- has plugins e.g. cloud syncing
+- should do separate backups apart from the syncing
+
+A malware keylogger could compromise the master password
+- can install it in a separate VM
+- store DB in encrypted USB as extra layer of isolation
+
+---
+
+
 
 
 
