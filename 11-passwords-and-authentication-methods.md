@@ -8,6 +8,9 @@
 - [Password Managers](#password-managers)
   - [Master Password](#master-password)
   - [KeePass, KeePassX and KeyPassXC](#keepass-keepassx-and-keypassxc)
+  - [LastPass](#lastpass)
+ 
+---
 
 ## Goals and Learning Objectives
 
@@ -195,7 +198,29 @@ A malware keylogger could compromise the master password
 
 ---
 
+## LastPass
 
+Recommended Cloud-based password manager
 
+- has the greatest attack surface
+  - integrates with the web browser and syncs across devices using LastPass servers
+- encrypted passwords and data are stored in LastPass servers
+- can use credit cards, emails, usernames, pins
+- cross platform including portable browsers
+- can auto change password for auto login sites
+- can auto login / auto populate
+- last pass cannot find your master password, because data is encrypted client side
+  - zero knowledge system
+- PBKDF2 SHA-1 / 5000 password iterations
+- supports 2FA
+
+LastPass and any tool that integrates with the browser are simply more vulnerable to attack:
+
+- Phising were you enter the Master password
+- Attacker can compromise LastPass servers
+- MITM can defeat 2FA
+- Attacker in your device using keylogger, master password can be compromised
+
+---
 
 
