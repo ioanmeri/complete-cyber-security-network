@@ -9,6 +9,7 @@
   - [Master Password](#master-password)
   - [KeePass, KeePassX and KeyPassXC](#keepass-keepassx-and-keypassxc)
   - [LastPass](#lastpass)
+  - [Hardening Lastpass](#hardening-lastpass)
  
 ---
 
@@ -222,5 +223,22 @@ LastPass and any tool that integrates with the browser are simply more vulnerabl
 - Attacker in your device using keylogger, master password can be compromised
 
 ---
+
+## Hardening Lastpass
+
+- better to use the binary / plugin version instead of the web ➡️ safer
+- never enable remember password option
+  - if you store it it's an attack vector
+- don't use a password reminder / remember it yourself / write the password down
+- Re-prompt for Master Password for e.g. Access a Secure Note
+- Use a security email for critical account notifications
+- Add Access restriction for countries
+- Disallow Tor logins
+- Password Iterations: 10000 - 20000
+- use MFA to mitigate password cracking
+- Disable password recovery
+
+---
+
 
 
