@@ -10,6 +10,7 @@
   - [KeePass, KeePassX and KeyPassXC](#keepass-keepassx-and-keypassxc)
   - [LastPass](#lastpass)
   - [Hardening Lastpass](#hardening-lastpass)
+  - [Creating a Strong Password That You Can Remember](#creating-a-strong-password-that-you-can-remember)
  
 ---
 
@@ -240,5 +241,34 @@ LastPass and any tool that integrates with the browser are simply more vulnerabl
 
 ---
 
+## Creating a Strong Password That You Can Remember
 
+You should use a password manager to generate and store your password
+- long passwords that you don't need to remember and cannot be reused
+- minimum 12 characters, recommended 43+ randomly generated
+
+Very sensitive data
+- 128-bit encryption use 22 character passwords + (Not future proof)
+- 256-bit encryption use 43 character passwords + (Good)
+- 512-bit encryption use 86 characters passwords + (Very good but slower)
+
+Properties to consider when creating a password
+- The difficulty to crack
+- The difficulty to remember
+- The difficulty to type
+
+The difficulty to crack a password is based on each entropy and randomness away from human patterns
+
+What you should **AVOID** using in passwords (Especially with passwords <= 20 characters)
+- Patterns
+- Avoid combinations or words or common patterns
+- Avoid common phrases (patterns)
+- Avoid dates, names (patterns)
+- Avoid common pattern combinations
+- Capital letters at the beginning
+- Lower-case letters in the middle
+- Symbols and numbers at the end
+- l33t speak
+
+---
 
