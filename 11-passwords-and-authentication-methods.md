@@ -270,5 +270,19 @@ What you should **AVOID** using in passwords (Especially with passwords <= 20 ch
 - Symbols and numbers at the end
 - l33t speak
 
+What to **DO** to create strong passwords that are memorable and strong
+- use pass phrases or sentences - increases length, entropy and randomness
+- foreign words are better because they are not in dictionaries
+- add paddings e.g. 11111111111 at the end - doesn't matter the pattern because of the length
+  - e.g. Bruce L33 - "Be like water."Amazon.com
+- better to create long passwords that you can remember than keep changing passwords
+- don't tell anyone your passwords or padding, or don't right down unless they are locked
+- don't use security questions
+- can split up the password in a password manager
+- change usernames as passwords like admin or root
+- prioritize the accounts that are most important and have multi factor authentication
+- setup notifications and alerts when account is accessed or funds are transfered
+- keep a backup of the password manager database
+
 ---
 
