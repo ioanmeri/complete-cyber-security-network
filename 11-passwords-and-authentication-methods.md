@@ -11,6 +11,7 @@
   - [LastPass](#lastpass)
   - [Hardening Lastpass](#hardening-lastpass)
   - [Creating a Strong Password That You Can Remember](#creating-a-strong-password-that-you-can-remember)
+- [Multi-Factor Authentication - Soft Tokens - Google Authenticator and Authy](#multi-factor-authentication---soft-tokens---google-authenticator-and-authy)
  
 ---
 
@@ -285,4 +286,67 @@ What to **DO** to create strong passwords that are memorable and strong
 - keep a backup of the password manager database
 
 ---
+
+## Multi-Factor Authentication - Soft Tokens - Google Authenticator and Authy
+
+Multi-factor authentication is a method of assigning access to a system based on presenting more than one piece of evidence to an authenticating system
+- Card - Chip + Pin number
+
+**3 types of possible authentication factors**
+
+- Something you **know** - Authenticatin by **knowledge**.
+  - e.g. Passwords, PINs, passphrases etc
+- Something you **have** - Authentication by **ownership**
+  - e.g. ID badge, smart card, credit card,
+  - soft token like google authenticator
+  - hardware token like yubikey or nitrokey
+  - an SMS or email sent to your phone
+  - a phone call verification et.c
+- Something a **person is** - Authentication by **characteristic**
+  - Retine scan
+  - Thumb scan
+  - Biometrics
+  - The iphone thumb scanner etc.
+
+> Multifactor authentication / Two-factor authentication (2FA) or 2 step verification
+
+**Time-based One-time Password (TOTP) soft token tools**
+
+- Google Authenticator which supports OATH OTP
+  - also called Disconnected token
+- Authy available in phones and desktop
+  - uses the cloud but they are encrypted
+  - recovery method determines the strength of the authentication
+  - you must have multiple devices with your second token on or you could forever be locked out of your accounts
+
+**OTP soft tokens**
+- Android
+  - Google Authenticator
+  - Duo Mobile
+  - Authy
+  - Authenticator Plus
+- iOS
+  - Google Authenticator
+  - Duo Mobile
+  - HDE OTP Generator
+  - Authy
+- Windows Phone
+  - Authenticator
+- BlackBerry
+  - 2 Steps Authenticator
+  - Authomator
+
+You can also have
+- SMS
+- email sent to your phone
+
+as a method of authentication
+
+---
+
+
+
+
+
+
 
