@@ -11,7 +11,10 @@
   - [LastPass](#lastpass)
   - [Hardening Lastpass](#hardening-lastpass)
   - [Creating a Strong Password That You Can Remember](#creating-a-strong-password-that-you-can-remember)
-- [Multi-Factor Authentication - Soft Tokens - Google Authenticator and Authy](#multi-factor-authentication---soft-tokens---google-authenticator-and-authy)
+- Multi-Factor Authentication
+  - [Soft Tokens - Google Authenticator and Authy](#soft-tokens---google-authenticator-and-authy)
+  - [Hard Tokens - 2FA Dongles](#hard-tokens---2fa-dongles)
+  - [Choosing a Method of Multi-Factor Authentication](#choosing-a-method-of-multi-factor-authentication)
  
 ---
 
@@ -287,7 +290,7 @@ What to **DO** to create strong passwords that are memorable and strong
 
 ---
 
-## Multi-Factor Authentication - Soft Tokens - Google Authenticator and Authy
+## Soft Tokens - Google Authenticator and Authy
 
 Multi-factor authentication is a method of assigning access to a system based on presenting more than one piece of evidence to an authenticating system
 - Card - Chip + Pin number
@@ -344,9 +347,38 @@ as a method of authentication
 
 ---
 
+## Hard Tokens - 2FA Dongles
 
+**Hard Tokens Manufacturers / Two Factor Auth (2FA) Dongles**
 
+- DigiFlak
+- Nitrokey
+- VASCO Data Security
+- WWPass
+- Yubico
 
+also implementing OTP but in hardware.
 
+they support the open authentication standard: Universal 2nd Factor (U2F) / hard token or connected token
+
+Businesses use RSA servers for remote access into the office
+
+---
+
+### Choosing a Method of Multi-Factor Authentication
+
+Tools: twofactorauth.org, dongleauth.info
+
+Depends on each website or application since they have their own MFA methods:
+
+- SMS
+- Phone call
+- Email
+- Hardware token
+- Software token
+
+can use yubikey-luks for hard disk encryption, also Yubico can work with veracrypt 
+
+---
 
 
