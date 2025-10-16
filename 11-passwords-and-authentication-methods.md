@@ -15,6 +15,8 @@
   - [Soft Tokens - Google Authenticator and Authy](#soft-tokens---google-authenticator-and-authy)
   - [Hard Tokens - 2FA Dongles](#hard-tokens---2fa-dongles)
   - [Choosing a Method of Multi-Factor Authentication](#choosing-a-method-of-multi-factor-authentication)
+  - [Strengths and Weaknesses](#strengths-and-weaknesses)
+  - [The Future of Passwords and Authentication](#the-future-of-passwords-and-authentication)
  
 ---
 
@@ -365,7 +367,7 @@ Businesses use RSA servers for remote access into the office
 
 ---
 
-### Choosing a Method of Multi-Factor Authentication
+## Choosing a Method of Multi-Factor Authentication
 
 Tools: twofactorauth.org, dongleauth.info
 
@@ -379,6 +381,35 @@ Depends on each website or application since they have their own MFA methods:
 
 can use yubikey-luks for hard disk encryption, also Yubico can work with veracrypt 
 
+---
+
+## Strengths and Weaknesses
+
+**Strengths**
+
+An attacker needs access to a second or even third factor and not just a single password
+- increases the difficulty
+
+**Weaknesses**
+
+- An attacker may access another factor by hacking a phone
+- An attacker may hack the phone network to receive the SMS
+  - SMS should be seem as inferior but better than nothing
+- Hard tokens may have malware on it
+- MFA still vulnerable in phising, MITM attack even using OTP
+  - a MITM can receive the OTP and rely them to the destination
+
+---
+
+## The Future of Passwords and Authentication
+
+Passwords will slowly fade away and be replaced
+
+SQRL is one possible future for passwords 
+- Scan it and login to the system
+
+CLEF is another possibility
+  
 ---
 
 
